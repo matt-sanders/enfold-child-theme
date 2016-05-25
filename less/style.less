@@ -1,0 +1,14 @@
+@import "mixins";
+
+html.responsive
+{
+    body#top
+    {
+	div#wrap_all
+	{
+	    @import "header";
+	    @import "body";
+	    @import "footer";
+	}
+    }
+}

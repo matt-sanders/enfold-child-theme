@@ -1,0 +1,45 @@
+@color-primary: #102832;
+@color-secondary: #FF6D5D;
+@radius: 0;
+@font-family: ~"'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif";
+@sm: 480px;
+@sm-max: ( @sm - 1 );
+@md: 768px;
+@md-max: ( @md - 1 );
+@lg: 1080px;
+@lg-max: ( @lg - 1 );
+@xl: 1600px;
+@xl-max: ( @xl - 1 );
+@screen-max-sm: ~"screen and ( max-width: @{sm-max} )";
+@screen-max-md: ~"screen and ( max-width: @{md-max} )";
+@screen-max-lg: ~"screen and ( max-width: @{lg-max} )";
+@screen-max-xl: ~"screen and  ( max-width: @{xl-max} )";
+@screen-sm: ~"screen and ( min-width: @{sm} )";
+@screen-md: ~"screen and ( min-width: @{md} )";
+@screen-lg: ~"screen and ( min-width: @{lg} )";
+@screen-xl: ~"screen and  ( min-width: @{xl} )";
+
+.vreceive(){
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+}
+
+.vcenter(){
+    white-space: nowrap;
+    text-align: center;
+
+    &:before
+    {
+	    content: '';
+	    display: inline-block;
+	    height: 100%;
+	    vertical-align: middle;
+    }
+}
+
+.placeholderColor(...) {
+    ::-webkit-input-placeholder {color:@arguments}
+    ::-moz-placeholder {color:@arguments}
+    :-ms-input-placeholder {color:@arguments}
+}

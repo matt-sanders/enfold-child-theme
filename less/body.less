@@ -1,0 +1,50 @@
+.avia-button,
+.avia-button.avia-color-theme-color
+input[type='submit']
+{
+    border: 1px solid @color-primary;
+    background-color: transparent;
+    color: @color-primary;
+    border-radius: @radius;
+    font-family: @font-family;
+    font-size: 15px;
+    padding: 5px 20px;
+    line-height: 1.65em;
+    transition: all 0.4s ease-out;
+
+    &:hover
+    {
+	background-color: @color-primary;
+	color: #fff;
+	
+	.avia_iconbox_title
+	{
+	    color: #fff;
+	}
+    }
+
+    span.avia_iconbox_title
+    {
+	font-family: @font-family;
+	font-weight: bold;
+	text-transform: uppercase;
+    }
+
+    &.avia-size-medium
+    {
+	font-weight: bold;
+	border-width: 2px;
+	font-size: 17px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+    }
+
+    &.avia-size-large
+    {
+	span
+	{
+	    font-size: 21px;
+	    border-width: 2px;
+	}
+    }
+}
