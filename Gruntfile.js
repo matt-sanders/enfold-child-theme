@@ -11,13 +11,13 @@ module.exports = function(grunt) {
 		    optimization: 2
 		},
 		files: {
-		    "./css/style.css": "less/style.less" // destination file and source file
+		    "./css/theme-style.css": "less/style.less" // destination file and source file
 		}
 	    }
 	},
 	postcss: {
 	    options: {
-                map: true,
+                map: false,
                 processors: [
                     require('autoprefixer')({
                         browsers: ['last 2 versions']
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
                 ]
             },
             dist: {
-                src: 'style.css'
+                src: 'css/theme-style.css'
             }
 	},
 	watch: {
