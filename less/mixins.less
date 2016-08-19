@@ -38,8 +38,8 @@
     }
 }
 
-.placeholderColor(...) {
-    ::-webkit-input-placeholder {color:@arguments}
-    ::-moz-placeholder {color:@arguments}
-    :-ms-input-placeholder {color:@arguments}
+.placeholder(@rules) {
+    ::-webkit-input-placeholder {@rules();}
+    ::-moz-placeholder {@rules();}
+    :-ms-input-placeholder {@rules();}
 }
