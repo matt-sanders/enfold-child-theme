@@ -1,0 +1,154 @@
+#main .harcourts-people-slider
+{
+    position: relative;
+    padding: 0 20px;
+
+    @media @screen-md
+    {
+        padding: 0 100px;
+    }//md
+    
+    .person
+    {
+        text-align: center;
+
+        .title
+        {
+            color: @color-primary;
+            font-size: 1.4em;
+            font-weight: normal;
+        }//title
+
+        a.button
+        {
+            text-transform: uppercase;
+            text-decoration: none;
+            color: @color-text;
+            border-color: @color-border;
+            background: @color-light;
+            font-weight: 500;
+            margin-top: 20px;
+
+            &:hover
+                  {
+                      color: @color-light;
+                      background-color: @color-text;
+                  }//hover
+        }//button
+    }//person
+
+}//harcourts-people-slider
+
+.owl-buttons
+{
+    .owl-prev,
+    .owl-next
+        {
+            background: none;
+            color: transparent;
+            font-size: 0;
+            line-height: 16px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin: -20px 0 0;
+            padding: 0;
+
+            &::before,
+            &::after
+                   {
+                       content: '';
+                       display: block;
+                       border-top: 1px solid darken(@color-text, 40%);
+                       width: 20px;
+                   }
+        }//next, prev
+    
+    .owl-prev
+    {
+        &::before
+               {
+                   transform: rotate(-60deg);
+               }
+
+        &::after
+               {
+                   transform: rotate(60deg);
+               }
+    }//prev
+
+    .owl-next
+    {
+        left: auto;
+        right: 0;
+        
+        &::before
+               {
+                   transform: rotate(60deg);
+               }
+
+        &::after
+               {
+                   transform: rotate(-60deg);
+               }
+    }//next
+}//owl-buttons
+
+.harcourts-agent-quote-slider
+{
+    position: relative;
+    padding: 0 40px;
+    
+    @media @screen-max-md
+    {
+        display: none !important;
+    }//max-md
+    
+    .agent-name
+    {
+        color: @color-primary;
+        font-size: 1.2em;
+    }//agent-name
+
+    .agent-title
+    {
+        margin-bottom: 20px;
+    }//agent-title
+
+    .agent-quote
+    {
+        font-style: italic;
+        color: darken(@color-text, 20%);
+    }//agent-quote
+
+    .agent-link
+    {
+        text-align: right;
+
+        .avia-button
+        {
+            color: @color-text;
+            background-color: @color-light;
+            border-color: @color-text;
+            text-transform: uppercase;
+
+            &:hover
+                  {
+                      background-color: @color-text;
+                      color: @color-light;
+                  }//hover
+        }//button
+    }//agent-link
+
+    .agent-image
+    {
+        width: 33%;
+        float: right;
+        text-align: center;
+    }//agent-image
+
+    .agent-details
+    {
+        width: 66%;
+    }//agent-details
+}//harcourts-agent-quote-slider
