@@ -228,3 +228,42 @@ h1, h2, h3, h4, h5, h6
                         {
                             line-height: 1.5em;
                         }
+
+.hide-mobile
+{
+    @media @screen-max-md
+    {
+        display: none !important;
+    }
+}
+
+.hide-desktop
+{
+    @media @screen-md
+    {
+        display: none !important;
+    }
+}
+
+.avia-image-container
+{
+
+    .av-caption-image-overlay-bg
+    {
+        opacity: 0.4 !important;
+    }//av-image-overlay-bg
+    
+    .av-image-caption-overlay
+    {
+        width: auto;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        
+        .av-image-caption-overlay-position
+        {
+            padding: 10px;
+        }//av-image-caption-overlay-position
+    }//av-image-caption-overlay
+}//avia-image-container-inner

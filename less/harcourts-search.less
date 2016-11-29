@@ -111,17 +111,26 @@
         }//form-group
     }//form
 
-    button
-    {
-        background-color: transparent;
-        border-color: @color-light;
-
-        &:hover
-              {
-                  background-color: @color-light;
-              }//hover
-    }//button
 }//harcourts-header-search-wrapper
+
+body#top div#wrap_all
+{
+    #harcourts-header-search-wrapper
+    {
+        button
+        {
+            background-color: @color-text;
+            border-color: @color-text;
+            color: @color-light;
+
+            &:hover
+                  {
+                      background-color: @color-light;
+                      color: @color-text;
+                  }//hover
+        }//button
+    }//header-search-wrapper
+}//wrap_all
 
 .show_mobile_menu #harcourts-header-search-wrapper
 {
