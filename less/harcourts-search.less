@@ -37,7 +37,8 @@
     box-shadow: none;
 }//noUi-background
 
-#harcourts-header-search-wrapper
+#harcourts-header-search-wrapper,
+#home-search-wrapper
 {
     background-color: lighten(@color-text, 55%);
     padding: 20px;
@@ -115,7 +116,8 @@
 
 body#top div#wrap_all
 {
-    #harcourts-header-search-wrapper
+    #harcourts-header-search-wrapper,
+    #home-search-wrapper
     {
         button
         {
@@ -155,15 +157,22 @@ body#top div#wrap_all
     {
         position: relative;
         
+        #home-search-wrapper
+        {
+            display: block;
+        }//home-search-wrapper
+        
         #harcourts-header-search-wrapper
         {
             @media @screen-md
             {
+                /*
                 display: block;
                 position: absolute;
                 z-index: 20;
                 left: 0;
                 right: 0;
+*/
             }//md
         }
     }//main
