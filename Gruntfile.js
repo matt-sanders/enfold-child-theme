@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
     require('jit-grunt')(grunt);
     grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.initConfig({
 	less: {
@@ -33,7 +34,8 @@ module.exports = function(grunt) {
 		files: ['less/**/*.less'], // which files to watch
 		tasks: ['buildless'],
 		options: {
-		    nospawn: true
+		    nospawn: true,
+                    livereload: true
 		}
 	    }
 	}
