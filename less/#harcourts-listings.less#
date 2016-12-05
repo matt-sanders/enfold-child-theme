@@ -1,0 +1,300 @@
+#harcourts-listings-wrap
+{
+
+    .control-wrap
+    {
+        margin-bottom: 40px;
+        
+        &::after
+               {
+                   content: '';
+                   display: block;
+                   clear: both;
+               }//after
+        
+        .total
+        {
+            @media @screen-md
+            {
+                float: left;
+            }//md
+        }//total
+
+        .listing-control
+        {
+            @media @screen-md
+            {
+                float: right;
+            }//md
+
+            .label,
+            select
+            {
+                display: inline-block;
+                vertical-align: middle;
+            }//label, select
+
+            label
+            {
+                text-transform: uppercase;
+                margin-right: 10px;
+            }//label
+            
+            select
+            {
+                width: 200px;
+                background-color: @color-light;
+                margin: 0;
+            }//select
+        }//listing-control
+    }//control-wrap
+    .listings
+    {
+        @media @screen-md
+        {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }//md
+
+        .listing
+        {
+            margin-bottom: 40px;
+            max-width: 245px;
+            @media @screen-md
+            {
+                width: 33%;
+            }//md
+
+            .listing_img
+            {
+                width: 245px;
+                height: 160px;
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                margin-bottom: 10px;
+            }//listing_img
+
+            .listing_title
+            {
+                font-size: 1.2em;
+                
+                a
+                {
+                    color: @color-primary;
+                }//a
+            }//listing_title
+
+            .listing_price
+            {
+                color: darken(@color-text, 20%);
+                font-weight: @font-bold;
+            }//listing_price
+
+        }//listing
+
+        &.listView
+        {
+            .listing
+            {
+                width: 100%;
+                padding-bottom: 40px;
+                border-bottom: 1px solid @color-border;
+
+                .listing_img
+                {
+                    @media @screen-md
+                    {
+                        float: left;
+                        padding-right: 40px;
+                    }//md
+                }//listing_img
+            }//listing
+        }//listView
+    }//listings
+
+    .infinite-loading-container
+    {
+        float: none;
+        display: block;
+        width: 100%;
+    }//infinite-loading-container
+
+    .no-listing-header
+    {
+        + .infinite-loading-container
+        {
+            display: none;
+        }//.infinite-loading-container
+    }//no-listing-header
+    
+
+       
+}//harcourts-listings-wrap
+
+.harcourts-single-listing
+{
+    h2
+    {
+        color: @color-text;
+        font-size: 1.2em;
+    }//h2
+
+    .harcourts-sharing
+    {
+        @media @screen-md
+        {
+            float: right;
+        }//md
+    }//harcourts-sharing
+    
+    #harcourts-listing-slider-wrap
+    {
+        margin-bottom: 40px;
+
+        .lSGallery
+        {
+            margin-left: auto;
+            margin-right: auto;
+
+            li
+            {
+                text-align: center;
+
+                img
+                {
+                    height: 90px;
+                    margin: auto;
+                }//img
+            }//li
+        }//gallery
+        
+        li
+        {
+            margin-left: 0;
+        }//li
+
+        .lSAction
+        {
+            a
+            {
+                background: rgba(0,0,0,0.6);
+                width: 20px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                color: @color-light;
+                text-decoration: none;
+                transition: all @speed @ease;
+                font-size: 20px;
+
+                &:hover
+                      {
+                          background: rgba(0,0,0,0.9);
+                      }//hover
+                &::before
+                       {
+                           content: '\e87d';
+                           font-family: @font-icon;
+                       }//before
+
+                &.lSPrev
+                {
+                    &::before
+                           {
+                               content: '\e87c';
+                           }//before
+                }//prev
+            }//a
+        }//action
+
+        div.lSSlideWrapper
+        {
+            max-width: 1024px;
+            margin-left: auto;
+            margin-right: auto;
+        }//slidewrapper
+
+        #harcourts-listing-slider
+        {
+            div.listing-image
+            {
+                text-align: center;
+            }//listing-image
+        }//harcourts-listing-slider
+    }//harcourts-listing-slider-wrap
+
+    .amen_list
+    {
+        margin: 0;
+        padding: 0;
+
+        li
+        {
+            display: inline-block;
+            vertical-align: top;
+            color: @color-primary;
+            font-size: 1.5em;
+            margin: 0 10px;
+
+            span.Bathrooms,
+            span.Bedrooms,
+            span.CarSpacesGarage
+                {
+                    color: transparent;
+                    font-size: 0;
+                    &::before
+                           {
+                               content: '';
+                               display: inline-block;
+                               vertical-align: top;
+                               margin-left: 5px;
+                           }//before
+                }
+
+            .Bathrooms::before
+                            {
+                                background: url('../img/ico-bath.png') no-repeat scroll center center;
+                                width: 50px;
+                                height: 23px;
+                            }
+
+            .Bedrooms::before
+                           {
+                               background: url('../img/ico-bed.png') no-repeat scroll center center;
+                               width: 42px;
+                               height: 25px;
+                           }
+
+            .CarSpacesGarage::before
+                                  {
+                                      background: url('../img/ico-car.png') no-repeat scroll center center;
+                                      width: 39px;
+                                      height: 28px;
+                                  }
+        }//li
+    }//amen_list
+
+    .listing-id
+    {
+        margin-top: 20px;
+    }//listing-id
+
+    .listing-price
+    {
+        margin-bottom: 20px;
+    }//listing-price
+
+    .togglecontainer
+    {
+        p.toggler
+        {
+            color: @color-text;
+            &::after
+                   {
+                       background-image: @select-dark;
+                   }//after
+        }//toggler
+    }//togglecontainer
+}//harcourts-single-listing

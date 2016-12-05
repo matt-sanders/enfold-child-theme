@@ -9,6 +9,27 @@ html.responsive
 	    @import "header";
 	    @import "body";
 	    @import "footer";
+            @import "harcourts-listings";
+            @import "person-slider";
+            @import "favourites";
 	}
+
+        @import "agents";
+
+        &.search-active
+        {
+            div#wrap_all header#header #header_meta .phone-info form .ajax_search_response
+            {
+                display: block;
+            }//ajax_search_response
+        }//search-active
+
+        &.harcourts-single-listing-body
+        {
+            @import "listing-print";
+        }
     }
+
+    @import "menu";
+    @import "harcourts-search";
 }

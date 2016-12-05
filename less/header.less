@@ -1,4 +1,203 @@
 header#header
 {
+    border: none;
+    
+    @media @screen-max-md
+    {
+        z-index: 1001;
 
-}
+        #header_meta,
+        #header_meta > .container,
+        .phone-info
+            {
+                height: 0;
+                min-height: 0;
+            }
+    }//max-md
+    
+    #header_meta
+    {
+        background: @color-light;
+        border-bottom: none;
+        
+        .phone-info
+        {
+            @media @screen-max-md
+            {
+                height: 0;
+            }//max-md
+            form
+            {
+                @media @screen-max-md
+                {
+                    display: none;
+                }//max-md
+                position: relative;
+                .input_wrap
+                {
+                    border-bottom: 1px solid @color-text;
+
+                    input
+                    {
+                        background: none;
+                        border: none;
+                    }//input
+
+                    input#searchsubmit
+                    {
+                        color: @color-text;
+                        font-family: @font-icon;
+                    }//searchsubmit
+                }//input_wrap
+
+                .ajax_search_response
+                {
+                    position: absolute;
+                    background: @color-light;
+                    box-shadow: 0 0 3px 0px rgba(0,0,0,0.2);
+                    width: 150%;
+                    left: -25%;
+                    top: 100%;
+                    padding-top: 15px;
+                    margin-top: 10px;
+                    border: 1px solid #ccc;
+                    display: none;
+
+                    &::before
+                           {
+                               content: '';
+                               display: block;
+                               width: 10px;
+                               height: 10px;
+                               position: absolute;
+                               left: 50%;
+                               margin-left: -5px;
+                               top: -6px;
+                               transform: rotate(45deg);
+                               border: 1px solid #ccc;
+                               border-right: none;
+                               border-bottom: none;
+                               background: #fff;
+                           }//before
+                }//ajax_search_response
+            }//form
+        }//phone-info
+    }//header_meta
+
+    #header_main
+    {
+        border: none;
+
+        nav.main_menu
+        {
+            @media @screen-menu-max and ( min-width: @md )
+            {
+                height: 35px;
+                margin-top: 47px;
+            }//screen-menu-max
+            
+            li.menu-item-top-level
+            {
+                a
+                {
+                    font-weight: normal;
+                    @media @screen-menu-max
+                    {
+                        line-height: 35px;
+                        height: 35px;
+                    }//screen-menu-max
+
+                    .avia-menu-fx
+                    {
+                        display: none;
+                    }//menu-fx
+                }//a
+
+                &.button-item
+                {
+                    > a span.avia-menu-text
+                    {
+                        border: 1px solid @color-primary;
+                        background: @color-primary;
+                        color: @color-light;
+                        padding: 10px 15px;
+                        transition: all @speed @ease;
+                        border-radius: @radius;
+                    }//.avia-menu-text
+
+                    > a:hover span.avia-menu-text
+                          {
+                              color: @color-primary;
+                              background: @color-light;
+                          }//hover
+                }//button-item
+            }//top-level
+        }//main_menu
+    }//header_main
+
+    .logo
+    {
+        @media @screen-max-md
+        {
+            margin-left: auto;
+            img
+            {
+                margin-left: auto;
+            }//img
+        }//max-md
+        a
+        {
+            @media @screen-menu
+            {
+                .vcenter();
+                img
+                {
+                    .vreceive();
+                }//img
+            }//screen-menu
+        }//a
+    }//logo
+}//header
+
+.title_container
+{
+    border-top: none;
+    
+    .container
+    {
+        padding-top: 0px;
+        
+        &::before
+               {
+                   border-top: 1px solid @color-primary;
+                   content: '';
+                   display: block;
+                   margin-bottom: 20px;
+               }//before
+    }//container
+    
+    h1
+    {
+        display: none;
+    }//h1
+    
+    .trail-before
+    {
+        display: none;
+    }//trail-before
+
+    .breadcrumb
+    {
+        position: relative;
+        right: auto;
+        left: 0;
+        top: 0;
+        margin-top: 0;
+        color: lighten(@color-text, 10%);
+    }//breadcrumb
+
+    & + .container_wrap
+    {
+        border-top: none;
+    }//container
+}//title_container

@@ -1,7 +1,177 @@
+#harcourts-pre-footer
+{
+    &::before
+           {
+               border-top: 1px solid @color-primary;
+               max-width: 1210px;
+               content: '';
+               display: block;
+               margin: auto;
+           }//before
+    
+    .harcourts-office-location-select
+    {
+        text-align: center;
+        *
+        {
+            @media @screen-md
+            {
+                display: inline-block;
+                vertical-align: middle;
+            }//md
+        }//*
+
+        select
+        {
+            margin: 10px auto;
+            width: 200px;
+            border-color: @color-primary;
+
+            @media @screen-md
+            {
+                margin: 0 10px;
+            }//md
+
+            option
+            {
+                display: block;
+            }
+        }//select
+
+        .label
+        {
+            text-transform: uppercase;
+            font-weight: @font-bold;
+            color: @color-primary;
+        }//label
+    }//harcourts-office-location-select
+}//harcourts-pre-footer
+
 div#footer
 {
+    border-top: none;
+    padding-top: 0;
 
-}
+    @media @screen-max-md
+    {
+        text-align: center;
+    }//max-md
+
+    #text-4
+    {
+        a
+        {
+            margin: 0 10px 0 0;
+            font-weight: @font-bold;
+
+            img
+            {
+                vertical-align: middle;
+            }//img
+        }//a
+    }//text4
+
+    #text-6
+    {
+        a
+        {
+            text-decoration: underline;
+        }//a
+    }//text-6
+
+    #text-5
+    {
+        img
+        {
+            vertical-align: middle;
+            margin: 0 10px;
+        }//img
+
+        @media @screen-md
+        {
+            text-align: right;
+            img
+            {
+                margin-right: 0;
+            }//img
+        }//md
+    }//text-5
+
+    .container
+    {
+        &::before
+               {
+                   content: '';
+                   display: block;
+                   border-top: 1px solid lighten(@color-border, 20%);
+               }
+    }//container
+
+    .avia_mailchimp_widget
+    {
+        h3.widgettitle
+        {
+            @media @screen-md
+            {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0;
+            }//md
+        }//widgettitle
+
+        div.av-mailchimp-widget
+        {
+            @media @screen-md
+            {
+                display: inline-block;
+                vertical-align: middle;
+            }//md
+        }//av-mailchimp-widget
+        
+        p
+        {
+            @media @screen-md
+            {
+                display: inline-block;
+                width: initial;
+                float: none;
+                vertical-align: middle;
+            }//md
+
+            input.button
+            {
+                background-color: @color-text;
+                border-color: @color-text;
+
+                &:hover
+                      {
+                          color: @color-text;
+                          background-color: @color-light;
+                      }
+                
+                @media @screen-md
+                {
+                    width: initial;
+                    min-width: initial;
+                    margin-top: 0;
+                }//md
+            }//button
+
+            input.text_input
+            {
+                background: @color-light;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                
+                @media @screen-md
+                {
+                    width: 200px;
+                    margin: 0 10px;
+                }//md
+            }//text_input
+        }//p
+    }//av-mailchimp-widget
+}//footer
 
 footer#socket
 {
