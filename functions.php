@@ -9,4 +9,9 @@ function add_custom_scripts(){
 }
 add_action('wp_enqueue_scripts', 'add_custom_scripts');
 
+function remove_actions(){
+    remove_filter('avia_ampersand','avia_ampersand');
+}
+add_action('init', 'remove_actions');
+
 ?>
