@@ -23,4 +23,19 @@ function avia_load_shortcodes($paths){
 }
 //add_filter('avia_load_shortcodes', 'avia_load_shortcodes', 15, 1);
 
+//add google fonts
+function avia_add_heading_font($fonts)
+{
+    $fonts['Source Sans Pro'] = 'Source Sans Pro:400,600,800';
+    return $fonts;
+}
+//add_filter( 'avf_google_heading_font',  'avia_add_heading_font');
+
+function avia_add_content_font($fonts)
+{
+    $fonts['Source Sans Pro'] = 'Source Sans Pro:400,600,800';
+    return $fonts;
+}
+//add_filter( 'avf_google_content_font',  'avia_add_content_font');
+
 ?>
