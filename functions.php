@@ -9,9 +9,18 @@ function add_custom_scripts(){
 }
 add_action('wp_enqueue_scripts', 'add_custom_scripts');
 
+//remove the special ampersand
 function remove_actions(){
     remove_filter('avia_ampersand','avia_ampersand');
 }
 add_action('init', 'remove_actions');
+
+//add a templatebuilder directory
+function avia_load_shortcodes($paths){
+    $shortcode_dir = get_stylesheet_directory().'/templatebuilder/';
+    array_unshift($paths, $shortcode_dir);
+    return $paths;
+}
+//add_filter('avia_load_shortcodes', 'avia_load_shortcodes', 15, 1);
 
 ?>
