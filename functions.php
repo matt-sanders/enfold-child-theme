@@ -38,4 +38,10 @@ function avia_add_content_font($fonts)
 }
 //add_filter( 'avf_google_content_font',  'avia_add_content_font');
 
+//force the profile tag to be https
+function https_profile($profile){
+return '<link rel="profile" href="https://gmpg.org/xfn/11" />'."\n";
+}
+add_filter('avf_profile_head_tag', 'https_profile');
+
 ?>
